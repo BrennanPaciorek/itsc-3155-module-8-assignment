@@ -1,4 +1,5 @@
 from flask import Flask, redirect, render_template
+from src.repositories.movie_repository import movie_repository_singleton
 
 app = Flask(__name__)
 
