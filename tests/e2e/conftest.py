@@ -1,7 +1,7 @@
 import pytest
-from app import app as a
+from app import app
 
 
 @pytest.fixture(scope='module')
-def app():
-    return a.test_client()
+def test_app():
+    return app.test_client()
