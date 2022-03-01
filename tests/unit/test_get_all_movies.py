@@ -1,7 +1,7 @@
 # Please run pytest from project root directory
 import sys
 from pathlib import Path
-sys.path.append(str(Path().resolve()))
+sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.repositories.movie_repository import movie_repository_singleton
 from src.models.movie import Movie
 
