@@ -22,7 +22,7 @@ def create_movies_form():
 @app.post('/movies')
 def create_movie():
     title = request.form.get('title')
-    director = request.form.get('request')
+    director = request.form.get('director')
     rating = request.form.get('rating')
     movie_repository_singleton.create_movie(title, director, rating)
 
