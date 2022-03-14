@@ -5,7 +5,7 @@
 {% block body %}
 <h1 class="mb-5">Create Movie Rating</h1>
 <p class="mb-3">Create a movie rating below</p>
-<form action="/movies/new" method="get">
+<form action="/movies" method="post">
     <label for="formControlInput" class="form-label">Movie Title</label>
     <input type="text" class="form-control" name="title" id="title" required>
 
@@ -13,7 +13,7 @@
     <input type="text" class="form-control" name="director" id="director" required>
 
     <label for="formRange" class="form-label">1-5 Star range</label>
-    <select class="form-select" aria-label="Default select" name="range" id="range">
+    <select class="form-select" aria-label="Default select" name="rating" id="range">
         <option value="1" selected="">1 Star</option>
         <option value="2">2 Star</option>
         <option value="3">3 Star</option>
