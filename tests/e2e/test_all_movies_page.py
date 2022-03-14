@@ -1,5 +1,4 @@
-# TODO: Feature 1
-import pytest
+
 
 def test_list_all_movies(test_app):
     test_app.post('/movies',data=dict(title="Spiderman", director="Sam Raimi", rating="3"))
