@@ -12,6 +12,7 @@ def test_get_all_movies_method():
     movie_repository_singleton.create_movie("Popular Movie", "Director Person", 1)
     singleton_movies = movie_repository_singleton.get_all_movies()
     for movie in range(3):
+        assert type(singleton_movies[movie]) is Movie
         assert singleton_movies[movie].title == movies[movie].title
         assert singleton_movies[movie].director == movies[movie].director
         assert singleton_movies[movie].rating == movies[movie].rating
