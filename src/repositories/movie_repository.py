@@ -21,8 +21,8 @@ class MovieRepository:
         return None
 
     def create_movie(self, title: str, director: str, rating: int) -> Movie:
-        # Create the movie instance
-        movie = Movie(title, director, rating)
+        # Create the movie instance (rating is automatically converted to string when ran in pytest, found this to be the workaround)
+        movie = Movie(title, director, int(rating))
         # Save the instance in our in-memory database
         self._db.append(movie)
         # Return the movie instance
