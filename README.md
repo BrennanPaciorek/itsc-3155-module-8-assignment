@@ -1,4 +1,4 @@
-# ITSC 3155 Module 8 Assignment
+# ITSC 3155 Module 9 Assignment
 
 This repository houses the scaffolding for a movie rating application. By the end, this application will fulfill the following user stories / features:
 
