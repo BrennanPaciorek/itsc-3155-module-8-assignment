@@ -5,5 +5,38 @@
 {% block body %}
 <h1 class="mb-5">Create Movie Rating</h1>
 <p class="mb-3">Create a movie rating below</p>
-<!-- TODO: Feature 2 -->
+<div class="container">
+    <form method="post">
+        <p>Movie Name</p>
+        <input type="text" class="form-control" name="name" required>
+        <br>
+        <p>Director</p>
+        <input type="text" class="form-control" name="director" required>
+        <br>
+        <p>Rating</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ratingOptions" id="oneStar" value="1">
+            <label class="form-check-label" for="oneStar">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ratingOptions" id="twoStar" value="2">
+            <label class="form-check-label" for="twoStar">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ratingOptions" id="threeStar" value="3">
+            <label class="form-check-label" for="threeStar">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ratingOptions" id="fourStar" value="4">
+            <label class="form-check-label" for="fourStar">4</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ratingOptions" id="fiveStar" value="5">
+            <label class="form-check-label" for="fiveStar">5</label>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
 {% endblock %}
