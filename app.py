@@ -23,10 +23,9 @@ def create_movies_form():
     return render_template('create_movies_form.html', create_rating_active=True)
 
 
-@app.post('/movies/new')
+@app.post('/movies')
 def create_movie():
-    get_movie_repository().create_movie(request.form["name"], request.form["director"], request.form["ratingOptions"])
-    
+    movie_repository.create_movie(request.form["name"], request.form["director"], request.form["ratingOptions"])
     return redirect('/movies')
 
 
