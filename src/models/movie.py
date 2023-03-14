@@ -5,3 +5,9 @@ class Movie:
         self.title = title
         self.director = director
         self.rating = rating
+
+    def get_title():
+        return self.title
+    
+    def toString(self):
+        return "Title: " + self.title + " | Director: " + self.director + " | Rating: " + str(self.rating)
