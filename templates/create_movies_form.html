@@ -6,4 +6,13 @@
 <h1 class="mb-5">Create Movie Rating</h1>
 <p class="mb-3">Create a movie rating below</p>
 <!-- TODO: Feature 2 -->
+<form action="/movies" method="POST">
+<label for="name">Movie Name:</label>
+<input type="text" id ="name" name="name"><br><br>
+<label for="rating">Rating:</label>
+<input type="number" id ="rating" name="rating" min="1" max="5"><br><br>
+<label for="director">Director:</label>
+<input type="text" id ="director" name="director"><br><br>
+<input type="submit" value="Submit">
+</form>
 {% endblock %}
