@@ -40,3 +40,7 @@ def get_movie_repository():
         _movie_repo = MovieRepository()
 
     return _movie_repo
+
+# Singleton to be used in other modules
+movie_repository_singleton = MovieRepository()
+

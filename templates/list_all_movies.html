@@ -5,5 +5,14 @@
 {% block body %}
 <h1 class="mb-5">All Movies</h1>
 <p class="mb-3">See our list of movie ratings below</p>
-<!-- TODO: Feature 1 -->
+<table class="mx-auto table">
+    <thead>
+        <tr><th>Title</th><th>Director</th><th>Rating</th></tr>
+    </thead>
+    <tbody>
+        {% for movie in movie_list %}
+            <tr><th>{{ movie.title }}</th><td>{{ movie.director }}</td><td>{{ movie.rating }}/5</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
