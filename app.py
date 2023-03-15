@@ -42,6 +42,6 @@ def create_movie():
 def search_movies():
     # TODO: Feature 3
     title = request.args.get("title")
-    mymovie = movie_repository_singleton.get_movie_by_title(title)
-
+   # mymovie = movie_repository_singleton.get_movie_by_title(title)
+    mymovie = movie_repository.get_movie_by_title(title)
     return render_template('search_movies.html', search_active=True, mymovie=mymovie)
