@@ -1,18 +1,12 @@
-{% extends '_layout.html' %}
-
-{% block title %}Movie Rating App | All Movies{% endblock %}
-
-{% block body %}
+{% extends '_layout.html' %} {% block title %}Movie Rating App | All Movies{% endblock %} {% block body %}
 <h1 class="mb-5">All Movies</h1>
 <p class="mb-3">See our list of movie ratings below</p>
-<table class="mx-auto table">
-    <thead>
-        <tr><th>Title</th><th>Director</th><th>Rating</th></tr>
-    </thead>
-    <tbody>
-        {% for movie in movie_list %}
-            <tr><th>{{ movie.title }}</th><td>{{ movie.director }}</td><td>{{ movie.rating }}/5</td></tr>
-        {% endfor %}
-    </tbody>
-</table>
+
+<!-- TODO: Feature 1 -->
+<ul>
+    {% for movie in db %}
+    <li>{{ movie }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
+
