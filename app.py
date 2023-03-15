@@ -1,7 +1,12 @@
-from flask import Flask, redirect, render_template, request
-from src.repositories.movie_repository import movie_repository_singleton
+
+from flask import Flask, redirect, render_template
+
+from src.repositories.movie_repository import get_movie_repository
+
 
 app = Flask(__name__)
+
+movie_repository = get_movie_repository()
 
 
 @app.get('/')
