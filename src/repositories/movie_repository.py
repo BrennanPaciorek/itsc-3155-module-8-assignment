@@ -1,5 +1,7 @@
 from src.models.movie import Movie
 
+_movie_repo = None
+
 
 
 class movierepo:
@@ -24,5 +26,16 @@ class movierepo:
             if movie.get_title() == title:
                 return movie
 
+def get_movie_repository():
+    global _movie_repo
 
-    
+    class MovieRepository:
+        """In memory database which is a simple list of movies"""
+
+        def __init__(self) -> None:
+            self._db: list[Movie] = []
+
+        def get_all_movies(self) -> list[Movie]:
+            """Simply return all movies from the in-memory database"""
+            return self._db
+

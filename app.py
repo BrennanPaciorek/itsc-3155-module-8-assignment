@@ -1,14 +1,18 @@
 
 from flask import Flask, redirect, render_template
 
+
 # from src.repositories.movie_repository import get_movie_repository
 import src.repositories.movie_repository as mod
 
 
+
 app = Flask(__name__)
+
 
 # movie_repository = get_movie_repository()
 movie_repository = mod.movierepo()
+
 
 @app.get('/')
 def index():
