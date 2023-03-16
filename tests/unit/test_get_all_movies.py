@@ -3,8 +3,11 @@ from src.models.movie import Movie
 
 def test_create_movie():
     test_movie = get_movie_repository().create_movie("Star Wars", "George Lucas", 5)
-
+    test_movie_list = []
+    test_movie_list.append(test_movie)
     movies = get_movie_repository().get_all_movies()
 
-    assert type(movies) == list[movies]
+    assert movies == list(Movie)
+    assert movies[0] == test_movie_list[0]
+    assert movies[0].title == test_movie_list[0].title
 
