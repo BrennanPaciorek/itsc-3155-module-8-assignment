@@ -7,7 +7,7 @@ def test_create_movie():
     test_movie_list.append(test_movie)
     movies = get_movie_repository().get_all_movies()
 
-    assert movies == list(Movie)
+    assert movies == test_movie_list
     assert movies[0] == test_movie_list[0]
     assert movies[0].title == test_movie_list[0].title
 
